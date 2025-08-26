@@ -1,22 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Content Manager - Mursing Travels</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <title>Mursing Travels CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <!-- Root element for Netlify CMS -->
-    <div id="nc-root"></div>
-
-    <!-- Load Netlify CMS locally from your public folder -->
-    <script src="/website-option2/admin/netlify-cms.js"></script>
-
-    <!-- Optional: configure the CMS (not strictly needed if you have config.yml) -->
+    <script src="https://unpkg.com/netlify-cms@^2.15.72/dist/netlify-cms.js"></script>
     <script>
+      // Manual initialization to ensure GitHub OAuth works
       window.CMS_MANUAL_INIT = true;
-      import("/website-option2/admin/netlify-cms.js").then(() => {
-        CMS.init();
+
+      CMS.init({
+        config: {
+          backend: {
+            name: "github",
+            repo: "codebluesolutionsllc/website-option2",
+            branch: "main",
+            auth_type: "oauth",
+            client_id: "YOUR_GITHUB_OAUTH_APP_CLIENT_ID",
+            base_url: "https://codebluesolutionsllc.github.io/website-option2"
+          },
+          media_folder: "public/uploads",
+          public_folder: "/uploads",
+          collections: [
+            {
+              name: "blog",
+              label: "Blog",
+              folder: "content/blog",
+              create: true,
+              slug: "{{slug}}",
+              fields: [
+                { name: "title", label: "Title", widget: "string" },
+                { name: "date", label: "Date", widget: "datetime" },
+                { name: "body", label: "Body", widget: "markdown" }
+              ]
+            }
+          ]
+        }
       });
     </script>
   </body>
