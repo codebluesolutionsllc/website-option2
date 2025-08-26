@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <!-- Load Netlify CMS from CDN -->
-    <script src="https://unpkg.com/netlify-cms@^2.15.72/dist/netlify-cms.js"></script>
+    <!-- Load Netlify CMS directly from jsDelivr CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.15.72/dist/netlify-cms.js"></script>
     <script>
-      // Enable manual initialization to ensure GitHub OAuth works
+      // Enable manual initialization
       window.CMS_MANUAL_INIT = true;
 
       CMS.init({
         config: {
           backend: {
             name: "github",
-            repo: "codebluesolutionsllc/website-option2", // Your repo
-            branch: "main",                               // Your default branch
+            repo: "codebluesolutionsllc/website-option2",
+            branch: "main",
             auth_type: "oauth",
-            client_id: "Ov23liBEGDX9ATyCt5Cn",           // GitHub OAuth app client ID
+            client_id: "Ov23liBEGDX9ATyCt5Cn",
             base_url: "https://codebluesolutionsllc.github.io/website-option2"
           },
-          media_folder: "public/uploads",   // Where uploaded images go
-          public_folder: "/uploads",        // URL path to access them
+          media_folder: "public/uploads",
+          public_folder: "/uploads",
           collections: [
             {
               name: "blog",
