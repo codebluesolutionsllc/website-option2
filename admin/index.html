@@ -1,10 +1,23 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <title>Mursing Travels CMS</title>
-    <!-- Use official Netlify CMS build via jsDelivr -->
-    <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.15.72/dist/netlify-cms.js"></script>
+    <meta charset="UTF-8" />
+    <title>Content Manager - Mursing Travels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body></body>
+  <body>
+    <!-- Root element for Netlify CMS -->
+    <div id="nc-root"></div>
+
+    <!-- Load Netlify CMS locally from your public folder -->
+    <script src="/website-option2/admin/netlify-cms.js"></script>
+
+    <!-- Optional: configure the CMS (not strictly needed if you have config.yml) -->
+    <script>
+      window.CMS_MANUAL_INIT = true;
+      import("/website-option2/admin/netlify-cms.js").then(() => {
+        CMS.init();
+      });
+    </script>
+  </body>
 </html>
