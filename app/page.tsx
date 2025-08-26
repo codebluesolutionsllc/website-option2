@@ -44,9 +44,11 @@ export default function TravelAgentPage() {
             <p className="font-sans text-lg md:text-xl mb-8 text-white/90 drop-shadow-md">
               Let me craft the perfect travel experience tailored just for you
             </p>
-            <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-              Book A Consultation
-            </Button>
+            <a href="#consultation">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                Book A Consultation
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -129,7 +131,11 @@ export default function TravelAgentPage() {
                   Crystal clear waters and pristine beaches
                 </p>
                 <Button variant="outline" size="sm" className="w-full bg-transparent" asChild>
-                  <a href="https://www.foratravel.com/guides/3LX7V8/a-celiac-guide-to-grand-cayman-jonah-pregulman" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.foratravel.com/guides/3LX7V8/a-celiac-guide-to-grand-cayman-jonah-pregulman"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Learn More
                   </a>
                 </Button>
@@ -151,7 +157,11 @@ export default function TravelAgentPage() {
                   Modern metropolis meets ancient tradition
                 </p>
                 <Button variant="outline" size="sm" className="w-full bg-transparent" asChild>
-                  <a href="https://www.foratravel.com/guides/FWYTFS/a-vegans-guide-to-tokyo-jonah-pregulman" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://www.foratravel.com/guides/FWYTFS/a-vegans-guide-to-tokyo-jonah-pregulman"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Learn More
                   </a>
                 </Button>
@@ -161,8 +171,82 @@ export default function TravelAgentPage() {
         </div>
       </section>
 
-      {/* Consultation, Connect, and Footer sections remain the same */}
-      {/* Just ensure all images use `${BASE_PATH}/image.png` */}
+      {/* Book a Consultation */}
+      <section id="consultation" className="py-16 bg-[#fdeed9]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-serif font-black text-3xl md:text-4xl mb-4 text-[#183f53]">Book a Consultation</h2>
+            <p className="font-sans text-lg max-w-2xl mx-auto text-[#183f53]/80">
+              Ready to start planning your dream vacation? Let's discuss your travel goals and create the perfect itinerary together.
+            </p>
+          </div>
+
+          <div className="bg-card rounded-lg overflow-hidden">
+            <iframe
+              src="https://form.typeform.com/to/aJ3HzlC9"
+              width="100%"
+              height="800"
+              frameBorder="0"
+              className="w-full"
+              title="Book a Consultation"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      {/* Connect With Me */}
+      <section id="connect" className="py-16 bg-card">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-serif font-black text-3xl md:text-4xl text-foreground mb-4">Connect With Me</h2>
+          <p className="font-sans text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Have questions or want to start planning right away? I'm here to help make your travel dreams a reality.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="flex flex-col items-center">
+              <div className="bg-accent text-accent-foreground p-4 rounded-full mb-4">
+                <Mail className="h-6 w-6" />
+              </div>
+              <h3 className="font-serif font-bold text-lg mb-2">Email Me</h3>
+              <p className="font-sans text-muted-foreground">Jonah@MursingTravels.com</p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="bg-accent text-accent-foreground p-4 rounded-full mb-4">
+                <Instagram className="h-6 w-6" />
+              </div>
+              <h3 className="font-serif font-bold text-lg mb-2">Instagram</h3>
+              <p className="font-sans text-muted-foreground">@WorldNomadTravelAdvisor</p>
+            </div>
+          </div>
+
+          <div className="flex justify-center space-x-4">
+            <a href="mailto:Jonah@MursingTravels.com">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Mail className="h-5 w-5 mr-2" /> Send Email
+              </Button>
+            </a>
+            <a href="https://www.instagram.com/WorldNomadTravelAdvisor" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="lg">
+                <Instagram className="h-5 w-5 mr-2" /> Follow on Instagram
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-primary text-primary-foreground py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex items-center justify-center space-x-3 mb-4">
+            <img src={`${BASE_PATH}/mursing-logo-new.png`} alt="Mursing Travels" className="h-24 w-auto" />
+            <span className="font-serif font-black text-lg">Mursing Travels</span>
+          </div>
+          <p className="font-sans text-sm opacity-80">
+            © 2024 Mursing Travels. Making travel dreams come true, one journey at a time.
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }
