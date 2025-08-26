@@ -216,7 +216,7 @@ export default function TravelAgentPage() {
                 <Instagram className="h-6 w-6" />
               </div>
               <h3 className="font-serif font-bold text-lg mb-2">Instagram</h3>
-              <p className="font-sans text-muted-foreground">@WorldNomadTravelAdvisor</p>
+              <p className="font-sans text-muted-foreground">@MursingTravels</p>
             </div>
           </div>
 
@@ -226,7 +226,7 @@ export default function TravelAgentPage() {
                 <Mail className="h-5 w-5 mr-2" /> Send Email
               </Button>
             </a>
-            <a href="https://www.instagram.com/WorldNomadTravelAdvisor" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/MursingTravels" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg">
                 <Instagram className="h-5 w-5 mr-2" /> Follow on Instagram
               </Button>
