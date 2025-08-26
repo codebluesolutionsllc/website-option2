@@ -6,39 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <!-- Load Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.15.72/dist/netlify-cms.js"></script>
-    <script>
-      // Manual initialization to ensure GitHub OAuth works
-      window.CMS_MANUAL_INIT = true;
-
-      CMS.init({
-        config: {
-          backend: {
-            name: "github",
-            repo: "codebluesolutionsllc/website-option2",
-            branch: "main",
-            auth_type: "oauth",
-            client_id: "Ov23liBEGDX9ATyCt5Cn",
-            base_url: "https://codebluesolutionsllc.github.io/website-option2"
-          },
-          media_folder: "public/uploads",
-          public_folder: "/uploads",
-          collections: [
-            {
-              name: "blog",
-              label: "Blog",
-              folder: "content/blog",
-              create: true,
-              slug: "{{slug}}",
-              fields: [
-                { name: "title", label: "Title", widget: "string" },
-                { name: "date", label: "Date", widget: "datetime" },
-                { name: "body", label: "Body", widget: "markdown" }
-              ]
-            }
-          ]
-        }
-      });
-    </script>
   </body>
 </html>
