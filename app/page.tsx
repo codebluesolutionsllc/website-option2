@@ -39,7 +39,7 @@ export default function TravelAgentPage() {
         <div className="relative z-10 flex-1 flex items-center justify-center text-center text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4">
             <h1 className="font-serif font-black text-4xl md:text-6xl mb-4 text-white drop-shadow-lg">
-              Mursing Travels
+              Ready To Talk?
             </h1>
             <p className="font-sans text-lg md:text-xl mb-8 text-white/90 drop-shadow-md">
               Let me craft the perfect travel experience tailored just for you
