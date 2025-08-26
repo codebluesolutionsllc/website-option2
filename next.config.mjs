@@ -1,15 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  output: 'export',             // enables static export
+  trailingSlash: true,          // ensures URLs end with a slash (good for GitHub Pages)
+  basePath: '/website-option2', // set the subpath for GitHub Pages
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true,   // ignore lint errors during build
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true,    // ignore type errors during build
   },
   images: {
-    unoptimized: true,
+    unoptimized: true,          // disables image optimization for static export
   },
 }
 
