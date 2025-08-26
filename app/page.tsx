@@ -243,7 +243,7 @@ export default function TravelAgentPage() {
             <span className="font-serif font-black text-lg">Mursing Travels</span>
           </div>
           <p className="font-sans text-sm opacity-80">
-            © 2024 Mursing Travels. Making travel dreams come true, one journey at a time.
+            © 2025 Mursing Travels, affiliate of Fora Travel. Making travel dreams come true, one journey at a time.
           </p>
         </div>
       </footer>
