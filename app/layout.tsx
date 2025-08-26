@@ -18,10 +18,9 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Dream Destinations Travel - Your Journey Starts Here",
+  title: "Mursing Travels",
   description:
-    "Professional travel advisor services. Let us plan your perfect getaway with personalized consultation and expert destination knowledge.",
-  generator: "v0.app",
+    "Professional travel advisor services. Let us plan your perfect getaway with personalized consultation and expert destination knowledge."
 }
 
 export default function RootLayout({
