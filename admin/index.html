@@ -4,22 +4,25 @@
     <meta charset="utf-8">
     <title>Mursing Travels CMS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Set base path to your GitHub Pages repo -->
+    <base href="/website-option2/">
   </head>
   <body>
-    <!-- Load Netlify CMS directly from jsDelivr CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/netlify-cms@2.15.72/dist/netlify-cms.js"></script>
+    <!-- Use Netlify CMS via CDN -->
+    <script src="https://unpkg.com/netlify-cms@^2.15.72/dist/netlify-cms.js"></script>
+
     <script>
-      // Enable manual initialization
+      // Manual initialization to ensure GitHub OAuth works
       window.CMS_MANUAL_INIT = true;
 
       CMS.init({
         config: {
           backend: {
             name: "github",
-            repo: "codebluesolutionsllc/website-option2",
-            branch: "main",
+            repo: "codebluesolutionsllc/website-option2",  // your GitHub repo
+            branch: "main",                               // default branch
             auth_type: "oauth",
-            client_id: "Ov23liBEGDX9ATyCt5Cn",
+            client_id: "Ov23liBEGDX9ATyCt5Cn",           // your OAuth app client ID
             base_url: "https://codebluesolutionsllc.github.io/website-option2"
           },
           media_folder: "public/uploads",
