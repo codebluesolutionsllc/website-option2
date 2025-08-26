@@ -3,7 +3,7 @@ name: Deploy Next.js site to GitHub Pages
 on:
   push:
     branches:
-      - main  # adjust if your default branch is different
+      - main  # update if your default branch is different
 
 jobs:
   build-and-deploy:
@@ -24,10 +24,8 @@ jobs:
           rm -f package-lock.json
           npm install --no-fund --no-audit
 
-      - name: Build and export static site
-        run: |
-          npm run build
-          npm run export
+      - name: Build project (static export handled automatically)
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
